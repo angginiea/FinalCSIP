@@ -1,9 +1,10 @@
-let collectionsLink = document.querySelector('#collections-link');
-let newLink = document.querySelector('#new-link');
-let trendingLink = document.querySelector('#trending-link');
-let popularLink = document.querySelector('#popular-link');
+let AccessoriesLink = document.querySelector('#accessories-link');
+let ApprelLink = document.querySelector('#apparel-link');
+let ShoesLink = document.querySelector('#shoeslink');
+let SaleLink = document.querySelector('#sale-link');
+let homeLink = document.querySelector('#home-link');
 
-let linkArray = [collectionsLink, newLink, trendingLink, popularLink];
+let linkArray = [AccessoriesLink, ApprelLink, ShoesLink, SaleLink, homeLink];
 
 linkArray.forEach((eachLink) => {
 	eachLink.addEventListener('click', (e) => {
@@ -12,16 +13,19 @@ linkArray.forEach((eachLink) => {
 				fetchPage(eachLink, 'collections.html');
 				break;
 
-			case newLink:
-				fetchPage(eachLink, 'newPage.html');
+			case ApprelLink:
+				fetchPage(eachLink, 'Apparel.html');
 				break;
 
-			case trendingLink:
-				fetchPage(eachLink, 'trending.html');
+			case SaleLink:
+				fetchPage(eachLink, 'Sale.html');
 				break;
 
-			case popularLink:
-				fetchPage(eachLink, 'popular.html');
+			case AccessoriesLink:
+				fetchPage(eachLink, 'Accessories.html');
+				break;
+
+			case homeLink(eachLink, 'Home.html')
 				break;
 		}
 	})
